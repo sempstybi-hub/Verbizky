@@ -1,0 +1,283 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\jury.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\jury.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|e:\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\verbizky\\verbizky\\win\\jury.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\jury.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\organizer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\organizer.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\organizer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\organizer.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|e:\\\u043F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\verbizky\\verbizky\\db\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\db\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\mainuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\mainuser.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\mainuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\mainuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\moderator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\moderator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\moderator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\moderator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Sdfga\\AppData\\Local\\Temp\\.vsdbgsrc\\8f43e5c2d3755c831d2adca631e0c9ab1b50a4e5fb5839919dff4f18f91eedf9\\FrameworkTemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\users.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\users.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\verbizky\\win\\users.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{07768BB8-689F-40DC-9C77-8D5673671F87}|Verbizky\\Verbizky.csproj|solutionrelative:verbizky\\win\\users.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\DB\\Model1.edmx",
+              "RelativeDocumentMoniker": "Verbizky\\DB\\Model1.edmx",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\DB\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Verbizky\\DB\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2026-03-15T13:14:32.301Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Jury.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Jury.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Jury.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Jury.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\Jury.xaml.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAADoAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T10:35:04.759Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "login.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\login.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\login.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\login.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\login.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T06:09:13.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Organizer.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Organizer.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Organizer.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Organizer.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\Organizer.xaml.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAApwJkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T05:30:33.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Organizer.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Organizer.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Organizer.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Organizer.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\Organizer.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T05:37:55.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Jury.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Jury.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Jury.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Jury.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\Jury.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T10:14:09.386Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MainUser.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\MainUser.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\MainUser.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\MainUser.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\MainUser.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T07:54:01.486Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainUser.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\MainUser.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\MainUser.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\MainUser.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\MainUser.xaml.cs",
+              "ViewState": "AgIAACwAAAAAAAAAAADwv24AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T07:08:51.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Moderator.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Moderator.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Moderator.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Moderator.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\Moderator.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T06:11:35.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "login.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\login.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\login.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\login.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\login.xaml.cs",
+              "ViewState": "AgIAALsAAAAAAAAAAAAlwNQAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T06:09:17.235Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Moderator.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Moderator.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Moderator.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Moderator.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\Moderator.xaml.cs",
+              "ViewState": "AgIAAE0BAAAAAAAAAADwv/YAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T07:33:32.906Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Register.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Register.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Register.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Register.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\Register.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T06:30:21.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "FrameworkTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\Sdfga\\AppData\\Local\\Temp\\.vsdbgsrc\\8f43e5c2d3755c831d2adca631e0c9ab1b50a4e5fb5839919dff4f18f91eedf9\\FrameworkTemplate.cs",
+              "ToolTip": "C:\\Users\\Sdfga\\AppData\\Local\\Temp\\.vsdbgsrc\\8f43e5c2d3755c831d2adca631e0c9ab1b50a4e5fb5839919dff4f18f91eedf9\\FrameworkTemplate.cs [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]",
+              "ViewState": "AgIAAFEDAAAAAAAAAAAowGADAAADAAAAAQAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T08:36:22.072Z",
+              "EditorCaption": " [\u0422\u043E\u043B\u044C\u043A\u043E \u0447\u0442\u0435\u043D\u0438\u0435]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Register.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Register.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Register.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Register.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\Register.xaml.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAIAwwE4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T06:30:22.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Users.xaml.cs",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Users.xaml.cs",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Users.xaml.cs",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Users.xaml.cs",
+              "RelativeToolTip": "Verbizky\\Win\\Users.xaml.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAlwOcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-15T06:24:57.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Users.xaml",
+              "DocumentMoniker": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Users.xaml",
+              "RelativeDocumentMoniker": "Verbizky\\Win\\Users.xaml",
+              "ToolTip": "E:\\\u041F\u0440\u0430\u043A\u0442\u0438\u043A\u0430\\\u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0430\\Verbizky\\Verbizky\\Win\\Users.xaml",
+              "RelativeToolTip": "Verbizky\\Win\\Users.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-03-15T06:24:05.344Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

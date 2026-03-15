@@ -1,0 +1,553 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище VBZ_2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Code2" />
+          </Key>
+          <Property Name="Code" Type="varchar" MaxLength="5" Nullable="false" />
+          <Property Name="Code2" Type="int" Nullable="false" />
+          <Property Name="NameCountry_RU" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="NameCountry_EN" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="CityId" Type="int" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="NameRolse" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NameRolse" Type="varchar" MaxLength="25" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Score">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Scores" Type="int" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="SecurityEvents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Event" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="Date" Type="date" Nullable="false" />
+          <Property Name="Days" Type="int" Nullable="false" />
+          <Property Name="CityId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="20" />
+          <Property Name="Img" Type="varchar(max)" />
+        </EntityType>
+        <EntityType Name="SetEvents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="SecEventsId" Type="int" Nullable="false" />
+          <Property Name="Activity" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Patronymic" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Gender" Type="varchar" MaxLength="15" Nullable="false" />
+          <Property Name="Mail" Type="varchar" MaxLength="35" Nullable="false" />
+          <Property Name="DateofBirth" Type="date" Nullable="false" />
+          <Property Name="Country" Type="int" Nullable="false" />
+          <Property Name="Phone" Type="bigint" Nullable="false" />
+          <Property Name="Direction" Type="varchar" MaxLength="45" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Photos" Type="varchar(max)" Nullable="false" />
+          <Property Name="RoleName" Type="varchar" MaxLength="25" Nullable="false" />
+          <Property Name="Event" Type="varchar" MaxLength="55" />
+        </EntityType>
+        <Association Name="FK_Country_City">
+          <End Role="City" Type="Self.City" Multiplicity="0..1" />
+          <End Role="Country" Type="Self.Country" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Country">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Score_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="Score" Type="Self.Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Score">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecurityEvents_City">
+          <End Role="City" Type="Self.City" Multiplicity="1" />
+          <End Role="SecurityEvents" Type="Self.SecurityEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SecurityEvents">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SetEvents_SecurityEvents">
+          <End Role="SecurityEvents" Type="Self.SecurityEvents" Multiplicity="1" />
+          <End Role="SetEvents" Type="Self.SetEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecurityEvents">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SetEvents">
+              <PropertyRef Name="SecEventsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SetEvents_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="SetEvents" Type="Self.SetEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SetEvents">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Country">
+          <End Role="Country" Type="Self.Country" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Code2" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Country" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Roles">
+          <End Role="Roles" Type="Self.Roles" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="NameRolse" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RoleName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище VBZ_2ModelContainer">
+          <EntitySet Name="City" EntityType="Self.City" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Score" EntityType="Self.Score" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SecurityEvents" EntityType="Self.SecurityEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SetEvents" EntityType="Self.SetEvents" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Country_City" Association="Self.FK_Country_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Country" EntitySet="Country" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Score_User" Association="Self.FK_Score_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Score" EntitySet="Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecurityEvents_City" Association="Self.FK_SecurityEvents_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SetEvents_SecurityEvents" Association="Self.FK_SetEvents_SecurityEvents">
+            <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+            <End Role="SetEvents" EntitySet="SetEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SetEvents_User" Association="Self.FK_SetEvents_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="SetEvents" EntitySet="SetEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Country" Association="Self.FK_User_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Roles" Association="Self.FK_User_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VBZ_2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="VBZ_2Entities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="City" EntityType="VBZ_2Model.City" />
+          <EntitySet Name="Country" EntityType="VBZ_2Model.Country" />
+          <EntitySet Name="Roles" EntityType="VBZ_2Model.Roles" />
+          <EntitySet Name="Score" EntityType="VBZ_2Model.Score" />
+          <EntitySet Name="SecurityEvents" EntityType="VBZ_2Model.SecurityEvents" />
+          <EntitySet Name="SetEvents" EntityType="VBZ_2Model.SetEvents" />
+          <EntitySet Name="sysdiagrams" EntityType="VBZ_2Model.sysdiagrams" />
+          <EntitySet Name="User" EntityType="VBZ_2Model.User" />
+          <AssociationSet Name="FK_Country_City" Association="VBZ_2Model.FK_Country_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="Country" EntitySet="Country" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SecurityEvents_City" Association="VBZ_2Model.FK_SecurityEvents_City">
+            <End Role="City" EntitySet="City" />
+            <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Country" Association="VBZ_2Model.FK_User_Country">
+            <End Role="Country" EntitySet="Country" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Roles" Association="VBZ_2Model.FK_User_Roles">
+            <End Role="Roles" EntitySet="Roles" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Score_User" Association="VBZ_2Model.FK_Score_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="Score" EntitySet="Score" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SetEvents_SecurityEvents" Association="VBZ_2Model.FK_SetEvents_SecurityEvents">
+            <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+            <End Role="SetEvents" EntitySet="SetEvents" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SetEvents_User" Association="VBZ_2Model.FK_SetEvents_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="SetEvents" EntitySet="SetEvents" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="City">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Country" Relationship="VBZ_2Model.FK_Country_City" FromRole="City" ToRole="Country" />
+          <NavigationProperty Name="SecurityEvents" Relationship="VBZ_2Model.FK_SecurityEvents_City" FromRole="City" ToRole="SecurityEvents" />
+        </EntityType>
+        <EntityType Name="Country">
+          <Key>
+            <PropertyRef Name="Code2" />
+          </Key>
+          <Property Name="Code" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="Code2" Type="Int32" Nullable="false" />
+          <Property Name="NameCountry_RU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="NameCountry_EN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="CityId" Type="Int32" />
+          <NavigationProperty Name="City" Relationship="VBZ_2Model.FK_Country_City" FromRole="Country" ToRole="City" />
+          <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_User_Country" FromRole="Country" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Roles">
+          <Key>
+            <PropertyRef Name="NameRolse" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NameRolse" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_User_Roles" FromRole="Roles" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Score">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Scores" Type="Int32" Nullable="false" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_Score_User" FromRole="Score" ToRole="User" />
+        </EntityType>
+        <EntityType Name="SecurityEvents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Event" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Days" Type="Int32" Nullable="false" />
+          <Property Name="CityId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="City" Relationship="VBZ_2Model.FK_SecurityEvents_City" FromRole="SecurityEvents" ToRole="City" />
+          <NavigationProperty Name="SetEvents" Relationship="VBZ_2Model.FK_SetEvents_SecurityEvents" FromRole="SecurityEvents" ToRole="SetEvents" />
+        </EntityType>
+        <EntityType Name="SetEvents">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="SecEventsId" Type="Int32" Nullable="false" />
+          <Property Name="Activity" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="SecurityEvents" Relationship="VBZ_2Model.FK_SetEvents_SecurityEvents" FromRole="SetEvents" ToRole="SecurityEvents" />
+          <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_SetEvents_User" FromRole="SetEvents" ToRole="User" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Surname" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Patronymic" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Gender" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Mail" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+          <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Country" Type="Int32" Nullable="false" />
+          <Property Name="Phone" Type="Int64" Nullable="false" />
+          <Property Name="Direction" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Photos" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="RoleName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Event" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Country1" Relationship="VBZ_2Model.FK_User_Country" FromRole="User" ToRole="Country" />
+          <NavigationProperty Name="Roles" Relationship="VBZ_2Model.FK_User_Roles" FromRole="User" ToRole="Roles" />
+          <NavigationProperty Name="Score" Relationship="VBZ_2Model.FK_Score_User" FromRole="User" ToRole="Score" />
+          <NavigationProperty Name="SetEvents" Relationship="VBZ_2Model.FK_SetEvents_User" FromRole="User" ToRole="SetEvents" />
+        </EntityType>
+        <Association Name="FK_Country_City">
+          <End Type="VBZ_2Model.City" Role="City" Multiplicity="0..1" />
+          <End Type="VBZ_2Model.Country" Role="Country" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Country">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SecurityEvents_City">
+          <End Type="VBZ_2Model.City" Role="City" Multiplicity="1" />
+          <End Type="VBZ_2Model.SecurityEvents" Role="SecurityEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="City">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SecurityEvents">
+              <PropertyRef Name="CityId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Country">
+          <End Type="VBZ_2Model.Country" Role="Country" Multiplicity="1" />
+          <End Type="VBZ_2Model.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Country">
+              <PropertyRef Name="Code2" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="Country" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_Roles">
+          <End Type="VBZ_2Model.Roles" Role="Roles" Multiplicity="1" />
+          <End Type="VBZ_2Model.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Roles">
+              <PropertyRef Name="NameRolse" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="RoleName" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Score_User">
+          <End Type="VBZ_2Model.User" Role="User" Multiplicity="1" />
+          <End Type="VBZ_2Model.Score" Role="Score" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Score">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SetEvents_SecurityEvents">
+          <End Type="VBZ_2Model.SecurityEvents" Role="SecurityEvents" Multiplicity="1" />
+          <End Type="VBZ_2Model.SetEvents" Role="SetEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SecurityEvents">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SetEvents">
+              <PropertyRef Name="SecEventsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SetEvents_User">
+          <End Type="VBZ_2Model.User" Role="User" Multiplicity="1" />
+          <End Type="VBZ_2Model.SetEvents" Role="SetEvents" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="SetEvents">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище VBZ_2ModelContainer" CdmEntityContainer="VBZ_2Entities1">
+          <EntitySetMapping Name="City">
+            <EntityTypeMapping TypeName="VBZ_2Model.City">
+              <MappingFragment StoreEntitySet="City">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Country">
+            <EntityTypeMapping TypeName="VBZ_2Model.Country">
+              <MappingFragment StoreEntitySet="Country">
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="NameCountry_EN" ColumnName="NameCountry_EN" />
+                <ScalarProperty Name="NameCountry_RU" ColumnName="NameCountry_RU" />
+                <ScalarProperty Name="Code2" ColumnName="Code2" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Roles">
+            <EntityTypeMapping TypeName="VBZ_2Model.Roles">
+              <MappingFragment StoreEntitySet="Roles">
+                <ScalarProperty Name="NameRolse" ColumnName="NameRolse" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Score">
+            <EntityTypeMapping TypeName="VBZ_2Model.Score">
+              <MappingFragment StoreEntitySet="Score">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Scores" ColumnName="Scores" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SecurityEvents">
+            <EntityTypeMapping TypeName="VBZ_2Model.SecurityEvents">
+              <MappingFragment StoreEntitySet="SecurityEvents">
+                <ScalarProperty Name="Img" ColumnName="Img" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CityId" ColumnName="CityId" />
+                <ScalarProperty Name="Days" ColumnName="Days" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SetEvents">
+            <EntityTypeMapping TypeName="VBZ_2Model.SetEvents">
+              <MappingFragment StoreEntitySet="SetEvents">
+                <ScalarProperty Name="Activity" ColumnName="Activity" />
+                <ScalarProperty Name="SecEventsId" ColumnName="SecEventsId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="VBZ_2Model.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="VBZ_2Model.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Event" ColumnName="Event" />
+                <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="Photos" ColumnName="Photos" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Direction" ColumnName="Direction" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+                <ScalarProperty Name="Mail" ColumnName="Mail" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

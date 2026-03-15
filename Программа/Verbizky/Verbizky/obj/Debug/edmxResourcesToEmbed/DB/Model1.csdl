@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VBZ_2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="VBZ_2Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="City" EntityType="VBZ_2Model.City" />
+    <EntitySet Name="Country" EntityType="VBZ_2Model.Country" />
+    <EntitySet Name="Roles" EntityType="VBZ_2Model.Roles" />
+    <EntitySet Name="Score" EntityType="VBZ_2Model.Score" />
+    <EntitySet Name="SecurityEvents" EntityType="VBZ_2Model.SecurityEvents" />
+    <EntitySet Name="SetEvents" EntityType="VBZ_2Model.SetEvents" />
+    <EntitySet Name="sysdiagrams" EntityType="VBZ_2Model.sysdiagrams" />
+    <EntitySet Name="User" EntityType="VBZ_2Model.User" />
+    <AssociationSet Name="FK_Country_City" Association="VBZ_2Model.FK_Country_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="Country" EntitySet="Country" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SecurityEvents_City" Association="VBZ_2Model.FK_SecurityEvents_City">
+      <End Role="City" EntitySet="City" />
+      <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Country" Association="VBZ_2Model.FK_User_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Roles" Association="VBZ_2Model.FK_User_Roles">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Score_User" Association="VBZ_2Model.FK_Score_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="Score" EntitySet="Score" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SetEvents_SecurityEvents" Association="VBZ_2Model.FK_SetEvents_SecurityEvents">
+      <End Role="SecurityEvents" EntitySet="SecurityEvents" />
+      <End Role="SetEvents" EntitySet="SetEvents" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SetEvents_User" Association="VBZ_2Model.FK_SetEvents_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="SetEvents" EntitySet="SetEvents" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="City">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Country" Relationship="VBZ_2Model.FK_Country_City" FromRole="City" ToRole="Country" />
+    <NavigationProperty Name="SecurityEvents" Relationship="VBZ_2Model.FK_SecurityEvents_City" FromRole="City" ToRole="SecurityEvents" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Code2" />
+    </Key>
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="false" />
+    <Property Name="Code2" Type="Int32" Nullable="false" />
+    <Property Name="NameCountry_RU" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="NameCountry_EN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CityId" Type="Int32" />
+    <NavigationProperty Name="City" Relationship="VBZ_2Model.FK_Country_City" FromRole="Country" ToRole="City" />
+    <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_User_Country" FromRole="Country" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="NameRolse" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NameRolse" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_User_Roles" FromRole="Roles" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Score">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Scores" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_Score_User" FromRole="Score" ToRole="User" />
+  </EntityType>
+  <EntityType Name="SecurityEvents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Event" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Days" Type="Int32" Nullable="false" />
+    <Property Name="CityId" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Img" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="City" Relationship="VBZ_2Model.FK_SecurityEvents_City" FromRole="SecurityEvents" ToRole="City" />
+    <NavigationProperty Name="SetEvents" Relationship="VBZ_2Model.FK_SetEvents_SecurityEvents" FromRole="SecurityEvents" ToRole="SetEvents" />
+  </EntityType>
+  <EntityType Name="SetEvents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SecEventsId" Type="Int32" Nullable="false" />
+    <Property Name="Activity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SecurityEvents" Relationship="VBZ_2Model.FK_SetEvents_SecurityEvents" FromRole="SetEvents" ToRole="SecurityEvents" />
+    <NavigationProperty Name="User" Relationship="VBZ_2Model.FK_SetEvents_User" FromRole="SetEvents" ToRole="User" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Surname" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Patronymic" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Mail" Type="String" Nullable="false" MaxLength="35" FixedLength="false" Unicode="false" />
+    <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Country" Type="Int32" Nullable="false" />
+    <Property Name="Phone" Type="Int64" Nullable="false" />
+    <Property Name="Direction" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Photos" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="RoleName" Type="String" Nullable="false" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="Event" Type="String" MaxLength="55" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country1" Relationship="VBZ_2Model.FK_User_Country" FromRole="User" ToRole="Country" />
+    <NavigationProperty Name="Roles" Relationship="VBZ_2Model.FK_User_Roles" FromRole="User" ToRole="Roles" />
+    <NavigationProperty Name="Score" Relationship="VBZ_2Model.FK_Score_User" FromRole="User" ToRole="Score" />
+    <NavigationProperty Name="SetEvents" Relationship="VBZ_2Model.FK_SetEvents_User" FromRole="User" ToRole="SetEvents" />
+  </EntityType>
+  <Association Name="FK_Country_City">
+    <End Type="VBZ_2Model.City" Role="City" Multiplicity="0..1" />
+    <End Type="VBZ_2Model.Country" Role="Country" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Country">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SecurityEvents_City">
+    <End Type="VBZ_2Model.City" Role="City" Multiplicity="1" />
+    <End Type="VBZ_2Model.SecurityEvents" Role="SecurityEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="City">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SecurityEvents">
+        <PropertyRef Name="CityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Country">
+    <End Type="VBZ_2Model.Country" Role="Country" Multiplicity="1" />
+    <End Type="VBZ_2Model.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Code2" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="Country" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Roles">
+    <End Type="VBZ_2Model.Roles" Role="Roles" Multiplicity="1" />
+    <End Type="VBZ_2Model.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="NameRolse" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="RoleName" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Score_User">
+    <End Type="VBZ_2Model.User" Role="User" Multiplicity="1" />
+    <End Type="VBZ_2Model.Score" Role="Score" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Score">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SetEvents_SecurityEvents">
+    <End Type="VBZ_2Model.SecurityEvents" Role="SecurityEvents" Multiplicity="1" />
+    <End Type="VBZ_2Model.SetEvents" Role="SetEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SecurityEvents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SetEvents">
+        <PropertyRef Name="SecEventsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SetEvents_User">
+    <End Type="VBZ_2Model.User" Role="User" Multiplicity="1" />
+    <End Type="VBZ_2Model.SetEvents" Role="SetEvents" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="SetEvents">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
